@@ -1,41 +1,46 @@
-package Hw2;
+package hw2;
+/**
+ * @author Александр Ключка
+ * @date 3/30/2022
+ */
 
-public class HW2 {
-    public static void main(String[] args) {
-        checkSumSign(5, 6 );
-        checkNumbers(3);
-        checkNumber(0);
-        print("ffff", 3);
-        checkYear(2020);
+ class HW2 {
+   public static void main(String[] args) {
+        checkSumSign(1,1);
+        checkNumbers(1);
+        checkNumber(1);
+        print("ddd",1);
+        checkYear(1111);
 
     }
     //1. Написать метод, принимающий на вход два целых числа и проверяющий,
     // что их сумма лежит в пределах от 10 до 20 (включительно), если да – вернуть true, в противном случае – false.
-    public static void checkSumSign(int a, int b) {
+     static void checkSumSign(int a, int b) {
         boolean s = (a+b)>10 && (a+b)<=20 ;
         System.out.println(s);
     }
     //2. Написать метод, которому в качестве параметра передается целое число,
     // метод должен напечатать в консоль, положительное ли число передали или отрицательное. Замечание: ноль считаем положительным числом.
-    public static void checkNumbers(int a) {
+
+     static void checkNumbers(int a) {
         System.out.println((a>=0)?"число положительное" : "число отрицательное");
     }
+
     //3. Написать метод, которому в качестве параметра передается целое число. Метод должен вернуть true, если число отрицательное, и вернуть false если положительное.
-    public static void checkNumber(int a) {
-        boolean s = (a)>0;
+     static void checkNumber(int a) {
+        boolean s = (a)<0;
         System.out.println(s);
     }
     //4. Написать метод, которому в качестве аргументов передается строка и число, метод должен отпечатать в консоль указанную строку, указанное количество раз;
-    public static void print(String b, int a){
-        int c =0;
-        while (a>c){
+     static void print(String b, int a){
+        int c = 0;
+         for (int i = 0; i < a; i++) {
             System.out.println(b);
-            c++;
         }
     }
     //5. * Написать метод, который определяет, является ли год високосным,
     // и возвращает boolean (високосный - true, не високосный - false). Каждый 4-й год является високосным, кроме каждого 100-го, при этом каждый 400-й – високосный.
-    public static void checkYear(int year) {
+     static void checkYear(int year) {
         if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.println(year + " Год високосный!");
         } else {
